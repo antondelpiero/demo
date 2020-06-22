@@ -1,0 +1,13 @@
+micronaut:
+  application:
+    name: demo
+datasources:
+  default:
+    username: "test"
+    password: "test"
+    url: "jdbc:tc:mysql:8.0.17://localhost/item?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=UTF-8&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false"
+    driverClassName: 'org.testcontainers.jdbc.ContainerDatabaseDriver'
+liquibase:
+  datasources:
+    default:
+      change-log: 'classpath:db/changelog.xml'

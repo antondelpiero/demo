@@ -10,4 +10,5 @@ import java.util.UUID
 interface ItemRepository : RxJavaCrudRepository<Item, UUID> {
     fun findByOrgId(orgId: UUID): Maybe<Item>
     fun findByName(name: String): Maybe<Item>
+    fun findByNameAndOrgId(name: String, orgId: UUID): Maybe<Item>
 }

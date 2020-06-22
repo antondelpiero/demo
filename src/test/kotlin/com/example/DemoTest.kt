@@ -32,4 +32,10 @@ class DemoTest(private val service: ItemService)
                              .blockingGet()
                          item.name shouldBe "test"
                      }
+
+                     "test the findByNameAndOrgId function" {
+                         val item = service.findByNameAndOrgId("test", UUID.fromString("e265bb25-203f-425c-965e-d2098ae4df94"))
+                             .blockingGet()
+                         item.name shouldBe "test"
+                     }
                  })

@@ -23,4 +23,8 @@ class ItemService(private val repository: ItemRepository) {
     fun findByName(name: String): Maybe<Item> {
         return repository.findByName(name)
     }
+
+    fun findByNameAndOrgId(name: String, orgId: UUID): Maybe<Item> {
+        return repository.findByNameAndOrgId(name, orgId)
+    }
 }
